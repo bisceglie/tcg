@@ -1,0 +1,8 @@
+config.yml
+
+.rspec
+/log
+/tmp
+/spec/tmp
+/.bundle
+.DS_Store

@@ -1,0 +1,15 @@
+.graph-container {
+    max-width = 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.graph-header {
+    background-color: #eee;
+}
+.graph-json-textfield {
+    flex-grow: 1;
+    margin-right: 16px;
+    color: rgb(97, 97, 97);
+    width: 100%;
+}

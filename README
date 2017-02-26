@@ -1,0 +1,28 @@
+This is a simple web app that takes in a Twitter screen name outputs a json graph data structure. Such a data structure could be consumed by D3 or another visualization framework or queried for relationship information. JSON structure modeled after example code here: https://bl.ocks.org/mbostock/4062045
+
+Limitations:
+- The project agressively throttles use to not run up against rate limiting.
+- Only the first degree of relationships are calculated. Experimental code is included (TwitterClient::TwitterApi#friends_friendships) but not used, due to complexity and rate-limiting.
+- App-developer account only authentication to the Twitter API. So it's not safe for more than user at a given time. Adding support for individual user oauth would mitigate to some extent. 
+- Cursors are ignored, so large friendship sets are truncated to the limit of a single query.
+
+
+Developed and tested on a 2014 MBP running ruby 2.2.6p396. Browser-tested in Chrome.
+
+------
+
+:: Instructions::
+
+Below assumes context of project directory.
+
+Gems managed through bundler, so to get started:
+
+     $ bundle install
+
+To run locally, run:
+
+   $ thin -r config.ru start
+
+To run unit tests, run:
+
+   $ rake spec
