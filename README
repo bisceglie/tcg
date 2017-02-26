@@ -15,6 +15,8 @@ Developed and tested on a 2014 MBP running ruby 2.2.6p396. Browser-tested in Chr
 
 Below assumes context of project directory.
 
+Copy config.yml.example to config.yml and fill in Twitter API creds
+
 Gems managed through bundler, so to get started:
 
    $ bundle install
